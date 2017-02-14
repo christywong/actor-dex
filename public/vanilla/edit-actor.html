@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Edit Information</title>
+  <meta name="author" content="Christy Wong, Arlen Pan, Kelsey Ma">
+</head>
+
+<body>
+  <section id="nav-bar">
+    <h1 id="title">Actor-Dex</h1>
+    <nav id="nav-links">
+      <a id="link-catalogue" href="catalogue.html">Catalogue</a> |
+      <a id="link-favorites" href="favorites.html">Favorites</a> |
+      <a id="link-login" href="index.html">Log Out</a> 
+    </nav>
+  </section>
+  
+  <section id="edit-info">
+    <h1>Edit Information</h1>
+    <form id="edit-form">
+      Name<br><input type="text" name="name"><br>
+      Age<br><input type="text" name="age"><br>
+      Biography<br><textarea form="edit-form" name="bio"></textarea><br>
+      Link to Image of Actor/Actress<br><input type="file" name="image"><br>
+      Gender<br>
+        <input type="checkbox" name="gender" value="male">Male<br>
+        <input type="checkbox" name="gender" value="female">Female<br>
+      Country of Origin<br>
+        <input type="radio" name="country" value="US">United States<br>
+        <input type="radio" name="country" value="UK">United Kingdom<br>
+      <input type="submit" name="submit">
+    </form>
+  </section>
+</body>
+</html>

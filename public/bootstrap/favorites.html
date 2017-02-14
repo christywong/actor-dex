@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Favorites</title>
+	<meta name="author" content="Christy Wong, Arlen Pan, Kelsey Ma">
+</head>
+
+<body>
+	<section id="nav-bar">
+		<h1 id="title">Actor-Dex</h1>
+		<nav id="nav-links">
+			<a id="link-catalogue" href="catalogue.html">Catalogue</a> |
+			<a id="link-favorites" href="favorites.html">Favorites</a> |
+			<a id="link-login" href="index.html">Log Out</a>
+		</nav>
+	</section>
+
+	<section>
+		<h3>Favorite Actors</h3>
+		<p><a href="notifications.html">Notifications</a></p>
+		Filter by:
+		<select id="select-gender">
+			<option value="" disabled selected>Gender</option>
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+		</select>
+		<select id="select-country">
+			<option value="" disabled selected>Country</option>
+			<option value="united-states">United States</option>
+			<option value="united-kingdom">United Kingdom</option>
+			<option value="other">Other</option>
+		</select>
+
+		<!-- ACTOR CARDS -->
+		<figure class="actor">
+			<a href="actor-info.html">
+				<img src="res/ryangosling.jpg" alt="Ryan Gosling">
+			</a>
+			<input type="checkbox" value="fav-ryan-gosling">
+			<figcaption>Ryan Gosling</figcaption>
+		</figure>
+
+		<figure class="actor">
+			<a href="actor-info.html">
+				<img src="res/emmawatson.jpg" alt="Emma Watson">
+			</a>
+			<input type="checkbox" value="fav-emma-watson">
+			<figcaption>Emma Watson</figcaption>
+		</figure>
+
+		<figure class="actor">
+			<a href="actor-info.html">
+				<img src="res/bradpitt.jpg" alt="Brad Pitt">
+			</a>
+			<input type="checkbox" value="fav-brad-pitt">
+			<figcaption>Brad Pitt</figcaption>
+		</figure>
+
+		<figure class="actor">
+			<a href="actor-info.html">
+				<img src="res/elizabetholsen.jpg" alt="Elizabeth Olsen">
+			</a>
+			<input type="checkbox" value="fav-elizabeth-olsen">
+			<figcaption>Elizabeth Olsen</figcaption>
+		</figure>
+	</section>
+
+</body>
+</html>
