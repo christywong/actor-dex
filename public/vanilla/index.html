@@ -4,19 +4,22 @@
   <meta charset="utf-8">
   <title>Actor-Dex</title>
   <meta name="author" content="Christy Wong, Arlen Pan, Kelsey Ma">
+  <link rel="stylesheet" type="text/css" href="styles/shared.css">
 </head>
 
 <body>
-  <section id="nav-bar">
-    <h1 id="title">Actor-Dex</h1>
-    <nav id="nav-links">
-      <a id="link-catalogue" href="catalogue.html">Catalogue</a> |
-      <a id="link-favorites" href="favorites.html">Favorites</a> |
-      <a id="link-login" href="login.html">Log In</a> 
+  <header id="nav-bar">
+    <h1 id="title"><a href="index.html">Actor-Dex</a></h1>
+    <nav>
+      <ul class="topnav" id="nav-links">
+        <li><a id="link-favorites" href="favorites.html">Favorites</a></li>
+        <li><a id="link-login" href="login.html">Log In</a></li>
+        <li class="icon"><a href="javascript:void(0);" onclick="responsiveNav()">☰</a></li> 
+      </ul>
     </nav>
-  </section>
+  </header>
   
-  <section id="search">
+  <section id="search" style="margin-top: 100px;">
     <h1>Search for an actor, actress, or movie</h1>
     <form id="search-form">
       <input type="search" name="search-actor-movie"><br>
@@ -24,5 +27,16 @@
       <button type="button"><a href="actor-info.html">Search</a></button>
     </form>
   </section>
+
+  <script>
+    function responsiveNav() {
+        var x = document.getElementById("nav-links");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+  </script>
 </body>
 </html>
