@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="styles/shared.css">
   <style type="text/css">
-  
+
   </style>
 </head>
 
@@ -27,14 +27,20 @@
     <h2>Inception</h2>
     <h5>Starring:</h5>
     <ul id="list-actors">
-      <li>Leonardo Dicaprio</li>
-      <li>Joseph-Gordon Levitt</li>
-      <li>Ellen Page</li>
-      <li>Tom Hardy</li>
-      <li>Ken Watanabe</li>
-      <li>Dileep Rao</li>
+      <li><a href="actor-info.html">Leonardo Dicaprio</a></li>
+      <li><a href="actor-info.html">Joseph-Gordon Levitt</a></li>
+      <li><a href="actor-info.html">Ellen Page</a></li>
+      <li><a href="actor-info.html">Tom Hardy</a></li>
+      <li><a href="actor-info.html">Ken Watanabe</a></li>
+      <li><a href="actor-info.html">Dileep Rao</a></li>
     </ul>
   </section>
 
+  <script>
+    function responsiveNav() {
+      var x = document.getElementById("nav-links");
+      x.className = (x.className === "topnav") ? "topnav responsive" : "topnav";
+    }
+  </script>
 </body>
 </html>
