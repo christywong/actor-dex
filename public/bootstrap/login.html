@@ -4,26 +4,53 @@
   <meta charset="utf-8">
   <title>Log In</title>
   <meta name="author" content="Christy Wong, Arlen Pan, Kelsey Ma">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <style type="text/css">
+    section#log-in {
+      padding-top: 80px;
+    }
+  </style>
 </head>
 
 <body>
   <section id="nav-bar">
-    <h1 id="title">Actor-Dex</h1>
-    <nav id="nav-links">
-      <a id="link-catalogue" href="catalogue.html">Catalogue</a> |
-      <a id="link-favorites" href="favorites.html">Favorites</a> |
-      <a id="link-login" href="login.html">Log In</a> 
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-toggleable-md">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+          </button>
+          <a class="navbar-brand" href="index.html">Actor-Dex</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="favorites.html">Favorites</a></li>
+            <li><a href="login.html">Log In</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </section>
   
-  <section id="log-in">
-    <h1>Log In</h1>
-    <form id="login-form">
-      <input type="text" name="email" placeholder="Email"><br>
-      <input type="text" name="password" placeholder="Password"><br>
-      <!--input type="submit" name="submit"-->
-      <button type="button"><a href="catalogue.html">Submit</a></button>
-    </form>
-  </section>
+  <div class="text-center">
+    <section id="log-in">
+      <h1>Log In</h1>
+      <form id="login-form">
+        <div class="form-group col-md-4 col-md-offset-4">
+          <input class="form-control" type="text" name="email" placeholder="Email"><br>
+          <input class="form-control" type="text" name="password" placeholder="Password"><br>
+          <!--input type="submit" name="submit"-->
+          <a id="submit-button" class="btn btn-primary" href="index.html" role="button">Submit</a>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>

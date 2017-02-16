@@ -4,33 +4,70 @@
   <meta charset="utf-8">
   <title>Edit Information</title>
   <meta name="author" content="Christy Wong, Arlen Pan, Kelsey Ma">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <style type="text/css">
+    section#edit-info {
+      padding-top: 50px;
+      margin-left: 20px;
+    }
+    label {
+      font-weight: normal !important;
+    }
+    .label-inputs {
+      margin-top: 10px;
+    }
+  </style>
 </head>
 
 <body>
   <section id="nav-bar">
-    <h1 id="title">Actor-Dex</h1>
-    <nav id="nav-links">
-      <a id="link-catalogue" href="catalogue.html">Catalogue</a> |
-      <a id="link-favorites" href="favorites.html">Favorites</a> |
-      <a id="link-login" href="index.html">Log Out</a> 
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-toggleable-md">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+          </button>
+          <a class="navbar-brand" href="index.html">Actor-Dex</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="favorites.html">Favorites</a></li>
+            <li><a href="login.html">Log Out</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </section>
   
   <section id="edit-info">
-    <h1>Edit Information</h1>
+    <h1>Add/Edit Information</h1>
     <form id="edit-form">
-      Name<br><input type="text" name="name"><br>
-      Age<br><input type="text" name="age"><br>
-      Biography<br><textarea form="edit-form" name="bio"></textarea><br>
-      Link to Image of Actor/Actress<br><input type="file" name="image"><br>
-      Gender<br>
-        <input type="checkbox" name="gender" value="male">Male<br>
-        <input type="checkbox" name="gender" value="female">Female<br>
-      Country of Origin<br>
-        <input type="radio" name="country" value="US">United States<br>
-        <input type="radio" name="country" value="UK">United Kingdom<br>
-      <input type="submit" name="submit">
+      <div class="form-group col-md-5">
+        <label for="name"><b>Name</b></label><br><input class="form-control" type="text" name="name" id="name">
+        <label class="label-inputs" for="age"><b>Age</b></label><br><input class="form-control" type="text" name="age" id="age">
+        <label class="label-inputs" for="bio"><b>Biography</b></label><br><textarea class="form-control" name="bio" id="bio"></textarea>
+        <label class="label-inputs" for="image"><b>Link to Image of Actor/Actress</b></label><br><input class="form-control-file" type="file" name="image" id="image">
+        <div class="checkbox">
+          <b>Gender</b><br>
+          <label><input class="form-check-input" type="checkbox" name="gender" value="male"> Male</label><br>
+          <label><input class="form-check-input" type="checkbox" name="gender" value="female"> Female</label><br>
+        </div>
+        <div class="radio-buttons">
+          <b>Country of Origin</b><br>
+          <label><input class="form-check-input" type="radio" name="country" value="US"> United States</label><br>
+          <label><input class="form-check-input" type="radio" name="country" value="UK"> United Kingdom</label><br>
+        </div>
+        <!--input type="submit" name="submit"-->
+        <a id="submit-button" class="label-inputs btn btn-primary" href="actor-info.html" role="button">Submit</a>
+    </div>
     </form>
   </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>

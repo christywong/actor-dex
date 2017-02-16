@@ -7,7 +7,16 @@
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+  <style type="text/css">
+    section#search {
+      padding-top: 80px;
+    }
+    input {
+      margin-top: 20px;
+      width: 50%;
+      padding: 5px 5px 5px 5px;
+    }
+  </style>
 </head>
 
 <body>
@@ -20,7 +29,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span> 
           </button>
-          <a class="navbar-brand" href="#">Actor-Dex</a>
+          <a class="navbar-brand" href="index.html">Actor-Dex</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
@@ -32,14 +41,18 @@
     </nav>
   </section>
   
-  <section id="search">
-    <h1>Search for an actor, actress, or movie</h1>
-    <form id="search-form">
-      <input type="search" name="search-actor-movie"><br>
-      <!--input type="submit" name="submit"-->
-      <button type="button"><a href="actor-info.html">Search</a></button>
-    </form>
-  </section>
+  <div class="text-center">
+    <section id="search">
+      <h1>Search for an actor, actress, or movie</h1>
+      <form id="search-form">
+        <div class="form-group col-md-6 col-md-offset-3">
+          <input class="form-control" type="search" name="search-actor-movie"><br>
+          <!--input type="submit" name="submit"-->
+          <a id="search-button" class="btn btn-primary" href="actor-info.html" role="button">Search</a>
+        </div>
+      </form>
+    </section>
+  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
