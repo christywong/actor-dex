@@ -13,7 +13,7 @@ header h1 a {
   color: white;
   text-decoration: none;
   float: left;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 header h1 a:hover {
   color: #969494;
@@ -42,16 +42,22 @@ header nav ul li a:hover {
 li.icon {
   display: none;
 }
+section.first-section {
+	margin-top:100px;
+}
+section.center-section {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
 @media screen and (max-width:500px) {
   ul.topnav li {display: none;}
   ul.topnav li.icon {
     float: right;
     display: inline-block;
-    margin-top: 0px;
     font-size: 20px;
   }
-}
-@media screen and (max-width:500px) {
+
   ul.topnav.responsive {
     position: relative;
     margin-bottom: 0px;

@@ -1,70 +1,105 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Favorites</title>
-	<meta name="author" content="Christy Wong, Arlen Pan, Kelsey Ma">
+  <meta charset="utf-8">
+  <title>Favorites</title>
+  <meta name="author" content="Christy Wong, Arlen Pan, Kelsey Ma">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles/shared.css">
+  <style type="text/css">
+    section#favorites-actors {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    img.portrait {
+      width: 150px;
+      margin-right: 10px;
+    }
+
+    figure {
+      display: flex;
+      margin: 10px 20px 10px 0px;
+      padding: 10px;
+      border: 1px solid lightgrey;
+      min-width: 250px;
+      width: 30%;
+      max-width: 300px;
+      height: 150px;
+    }
+
+    figure figcaption {
+      align-self: flex-end;
+      font-size: 120%;
+    }
+  </style>
 </head>
 
 <body>
-	<section id="nav-bar">
-		<h1 id="title">Actor-Dex</h1>
-		<nav id="nav-links">
-			<a id="link-catalogue" href="catalogue.html">Catalogue</a> |
-			<a id="link-favorites" href="favorites.html">Favorites</a> |
-			<a id="link-login" href="index.html">Log Out</a>
-		</nav>
-	</section>
+  <header id="nav-bar">
+    <h1 id="title"><a href="index.html">Actor-Dex</a></h1>
+    <nav>
+      <ul class="topnav" id="nav-links">
+        <li><a id="link-favorites" href="favorites.html">Favorites</a></li>
+        <li><a id="link-login" href="login.html">Log In</a></li>
+        <li class="icon"><a href="javascript:void(0);" onclick="responsiveNav()">☰</a></li> 
+      </ul>
+    </nav>
+  </header>
 
-	<section>
-		<h3>Favorite Actors</h3>
-		<p><a href="notifications.html">Notifications</a></p>
-		Filter by:
-		<select id="select-gender">
-			<option value="" disabled selected>Gender</option>
-			<option value="male">Male</option>
-			<option value="female">Female</option>
-		</select>
-		<select id="select-country">
-			<option value="" disabled selected>Country</option>
-			<option value="united-states">United States</option>
-			<option value="united-kingdom">United Kingdom</option>
-			<option value="other">Other</option>
-		</select>
+  <section class="first-section center-section">
+    <h2>Favorite Actors</h2>
+    <p><a href="notifications.html">Notifications</a></p>
+    Filter by:
+    <select id="select-gender">
+      <option value="" disabled selected>Gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+    <select id="select-country">
+      <option value="" disabled selected>Country</option>
+      <option value="united-states">United States</option>
+      <option value="united-kingdom">United Kingdom</option>
+      <option value="other">Other</option>
+    </select>
+  </section>
 
-		<!-- ACTOR CARDS -->
-		<figure class="actor">
-			<a href="actor-info.html">
-				<img src="res/ryangosling.jpg" alt="Ryan Gosling">
-			</a>
-			<input type="checkbox" value="fav-ryan-gosling">
-			<figcaption>Ryan Gosling</figcaption>
-		</figure>
+  <section id="favorites-actors" class="center-section">
+    <!-- ACTOR CARDS -->
+    <figure class="actor">
+      <a href="actor-info.html">
+        <img class="portrait" src="res/ryangosling.jpg" alt="Ryan Gosling">
+      </a>
+      <figcaption>Ryan Gosling</figcaption>
+    </figure>
 
-		<figure class="actor">
-			<a href="actor-info.html">
-				<img src="res/emmawatson.jpg" alt="Emma Watson">
-			</a>
-			<input type="checkbox" value="fav-emma-watson">
-			<figcaption>Emma Watson</figcaption>
-		</figure>
+    <figure class="actor">
+      <a href="actor-info.html">
+        <img class="portrait" src="res/emmawatson.jpg" alt="Emma Watson">
+      </a>
+      <figcaption>Emma Watson</figcaption>
+    </figure>
 
-		<figure class="actor">
-			<a href="actor-info.html">
-				<img src="res/bradpitt.jpg" alt="Brad Pitt">
-			</a>
-			<input type="checkbox" value="fav-brad-pitt">
-			<figcaption>Brad Pitt</figcaption>
-		</figure>
+    <figure class="actor">
+      <a href="actor-info.html">
+        <img class="portrait" src="res/bradpitt.jpg" alt="Brad Pitt">
+      </a>
+      <figcaption>Brad Pitt</figcaption>
+    </figure>
 
-		<figure class="actor">
-			<a href="actor-info.html">
-				<img src="res/elizabetholsen.jpg" alt="Elizabeth Olsen">
-			</a>
-			<input type="checkbox" value="fav-elizabeth-olsen">
-			<figcaption>Elizabeth Olsen</figcaption>
-		</figure>
-	</section>
+    <figure class="actor">
+      <a href="actor-info.html">
+        <img class="portrait" src="res/elizabetholsen.jpg" alt="Elizabeth Olsen">
+      </a>
+      <figcaption>Elizabeth Olsen</figcaption>
+    </figure>
+  </section>
 
+  <script>
+    function responsiveNav() {
+      var x = document.getElementById("nav-links");
+      x.className = (x.className === "topnav") ? "topnav responsive" : "topnav";
+    }
+  </script>
 </body>
 </html>

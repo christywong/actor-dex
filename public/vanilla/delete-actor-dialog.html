@@ -6,7 +6,6 @@
 	<meta name="author" content="Christy Wong, Arlen Pan, Kelsey Ma">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="styles/shared.css">
-
 	<style type="text/css">
 		#delete-dialog {
 			text-align: center;
@@ -17,14 +16,14 @@
 	<section id="delete-dialog">
 		<h3>Are you sure you want to delete?</h3>
 		<div class="yes-no">
-			<button type="submit" class="yes-button" id="delete-actor-yes">Yes</button>
-			<button type="submit" class="no-button" id="delete-actor-no">No</button>
+			<button type="button" class="yes-button" id="delete-actor-yes">Yes</button>
+			<button type="button" class="no-button" id="delete-actor-no">No</button>
 		</div>
 	</section>
 
 	<script type="text/javascript">
     document.getElementById("delete-actor-yes").onclick = function () {
-        location.href = "actor-info.html";
+        location.href = "index.html";
     };
     document.getElementById("delete-actor-no").onclick = function () {
         location.href = "actor-info.html";
