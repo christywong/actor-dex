@@ -4,33 +4,92 @@
   <meta charset="utf-8">
   <title>Edit Information</title>
   <meta name="author" content="Christy Wong, Arlen Pan, Kelsey Ma">
+  <link rel="stylesheet" type="text/css" href="styles/shared.css">
+  <style type="text/css">
+    section#edit-info {
+      margin-top: 90px;
+      margin-left: 20px;
+    }
+    input {
+      font-size: 11pt;
+      margin-bottom: 7px;
+    }
+    .text-input {
+      width: 40%;
+      border: 1px solid #C2C2C2;
+      box-shadow: 1px 1px 4px #EBEBEB;
+      margin-top: 3px;
+      padding: 10px 10px 10px 10px;
+    }
+    textarea#bio {
+      margin-bottom: 7px;
+      height: 100px;
+      border: 1px solid #C2C2C2;
+      box-shadow: 1px 1px 4px #EBEBEB;
+      font-size: 11pt;
+      padding: 10px 10px 10px 10px;
+    }
+    .check-radio {
+      margin-left: 15px;
+    }
+    button {
+      margin-top: 7px;
+      background: #4B99AD;
+      padding: 8px 15px 8px 15px;
+      border: none;
+      border-radius: 3px;
+    }
+    a#submit-link {
+      color: white;
+      text-decoration: none;
+      font-size: 11pt;
+    }
+    span {
+      font-weight: bold;
+    }
+  </style>
 </head>
 
 <body>
-  <section id="nav-bar">
-    <h1 id="title">Actor-Dex</h1>
-    <nav id="nav-links">
-      <a id="link-catalogue" href="catalogue.html">Catalogue</a> |
-      <a id="link-favorites" href="favorites.html">Favorites</a> |
-      <a id="link-login" href="index.html">Log Out</a> 
+  <header id="nav-bar">
+    <h1 id="title"><a href="index.html">Actor-Dex</a></h1>
+    <nav>
+      <ul class="topnav" id="nav-links">
+        <li><a id="link-favorites" href="favorites.html">Favorites</a></li>
+        <li><a id="link-login" href="login.html">Log Out</a></li>
+        <li class="icon"><a href="javascript:void(0);" onclick="responsiveNav()">☰</a></li> 
+      </ul>
     </nav>
-  </section>
-  
+  </header>
+
   <section id="edit-info">
-    <h1>Edit Information</h1>
+    <h1>Add/Edit Information</h1>
     <form id="edit-form">
-      Name<br><input type="text" name="name"><br>
-      Age<br><input type="text" name="age"><br>
-      Biography<br><textarea form="edit-form" name="bio"></textarea><br>
-      Link to Image of Actor/Actress<br><input type="file" name="image"><br>
-      Gender<br>
-        <input type="checkbox" name="gender" value="male">Male<br>
-        <input type="checkbox" name="gender" value="female">Female<br>
-      Country of Origin<br>
-        <input type="radio" name="country" value="US">United States<br>
-        <input type="radio" name="country" value="UK">United Kingdom<br>
-      <input type="submit" name="submit">
+      <label for="name"><span>Name</span></label><br><input type="text" name="name" id="name" class="text-input"><br>
+      <label for="age"><span>Age</span></label><br><input type="text" name="age" id="age" class="text-input"><br>
+      <label for="bio"><span>Biography</span></label><br><textarea form="edit-form" name="bio" id="bio" class="text-input"></textarea><br>
+      <span>Link to Image of Actor/Actress</span><br><input type="file" name="image" id="image"><br>
+      <span>Gender</span><br>
+        <label><input type="checkbox" name="gender" value="male" class="check-radio">Male</label><br>
+        <label><input type="checkbox" name="gender" value="female" class="check-radio">Female</label><br>
+      <span>Country of Origin</span><br>
+        <label><input type="radio" name="country" value="US" class="check-radio">United States</label><br>
+        <label><input type="radio" name="country" value="UK" class="check-radio">United Kingdom</label><br>
+      <!--input type="submit" name="submit"-->
+      <button type="button"><a id="submit-link" href="catalogue.html">Submit</a></button>
     </form>
   </section>
+  
+  <script>
+    function responsiveNav() {
+      var x = document.getElementById("nav-links");
+      if (x.className === "topnav") {
+          x.className += " responsive";
+      } else {
+          x.className = "topnav";
+      }
+    }
+  </script>
+
 </body>
 </html>

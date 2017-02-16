@@ -4,26 +4,81 @@
   <meta charset="utf-8">
   <title>Log In</title>
   <meta name="author" content="Christy Wong, Arlen Pan, Kelsey Ma">
+  <link rel="stylesheet" type="text/css" href="styles/shared.css">
+  <style type="text/css">
+    section#log-in {
+      padding-top: 80px;
+      margin: auto;
+      width: 50%;
+    }
+    .log-in-title {
+      text-align: center;
+    }
+    .text-input {
+      display: block;
+      margin : 0 auto;
+      width: 55%;
+      font-size: 12pt;
+      text-align: center;
+      padding: 10px 10px 10px 10px;
+      border: 1px solid #C2C2C2;
+      box-shadow: 1px 1px 4px #EBEBEB;
+    }
+    button {
+      display: block;
+      margin: 0 auto;
+      background: #4B99AD;
+      padding: 8px 15px 8px 15px;
+      border: none;
+      border-radius: 3px;
+    }
+    a#submit-link {
+      color: white;
+      text-decoration: none;
+      font-size: 11pt;
+    }
+    @media screen and (max-width:700px) {
+      input#email-input {
+        width: 100%;
+      }
+      input#password-input {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <section id="nav-bar">
-    <h1 id="title">Actor-Dex</h1>
-    <nav id="nav-links">
-      <a id="link-catalogue" href="catalogue.html">Catalogue</a> |
-      <a id="link-favorites" href="favorites.html">Favorites</a> |
-      <a id="link-login" href="login.html">Log In</a> 
+  <header id="nav-bar">
+    <h1 id="title"><a href="index.html">Actor-Dex</a></h1>
+    <nav>
+      <ul class="topnav" id="nav-links">
+        <li><a id="link-favorites" href="favorites.html">Favorites</a></li>
+        <li><a id="link-login" href="login.html">Log In</a></li>
+        <li class="icon"><a href="javascript:void(0);" onclick="responsiveNav()">☰</a></li> 
+      </ul>
     </nav>
-  </section>
+  </header>
   
   <section id="log-in">
-    <h1>Log In</h1>
+    <h1 class="log-in-title">Log In</h1>
     <form id="login-form">
-      <input type="text" name="email" placeholder="Email"><br>
-      <input type="text" name="password" placeholder="Password"><br>
+      <input id="email-input" class="text-input" type="text" name="email" placeholder="Email"><br>
+      <input id="password-input" class="text-input" type="text" name="password" placeholder="Password"><br>
       <!--input type="submit" name="submit"-->
-      <button type="button"><a href="catalogue.html">Submit</a></button>
+      <button type="button"><a id="submit-link" href="index.html">Submit</a></button>
     </form>
   </section>
+
+   <script>
+    function responsiveNav() {
+        var x = document.getElementById("nav-links");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+  </script>
 </body>
 </html>

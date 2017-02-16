@@ -5,6 +5,37 @@
   <title>Actor-Dex</title>
   <meta name="author" content="Christy Wong, Arlen Pan, Kelsey Ma">
   <link rel="stylesheet" type="text/css" href="styles/shared.css">
+  <style type="text/css">
+    section#search {
+      padding-top: 80px;
+      margin: auto;
+      width: 50%;
+    }
+    .search-title {
+      text-align: center;
+    }
+    input#search-input {
+      width: 100%;
+      font-size: 12pt;
+      border: 1px solid #C2C2C2;
+      box-shadow: 1px 1px 4px #EBEBEB;
+      padding: 7px 7px 7px 7px;
+    }
+    button#submit-button {
+      display: block;
+      margin: 0 auto;
+      margin-top: 15px;
+      background: #4B99AD;
+      padding: 8px 15px 8px 15px;
+      border: none;
+      border-radius: 3px;
+    }
+    a#search-link {
+      color: white;
+      text-decoration: none;
+      font-size: 11pt;
+    }
+  </style>
 </head>
 
 <body>
@@ -19,12 +50,12 @@
     </nav>
   </header>
   
-  <section id="search" style="margin-top: 100px;">
-    <h1>Search for an actor, actress, or movie</h1>
+  <section id="search">
+    <h1 class="search-title">Search for an actor, actress, or movie</h1>
     <form id="search-form">
-      <input type="search" name="search-actor-movie"><br>
+      <input id="search-input" type="search" name="search-actor-movie"><br>
       <!--input type="submit" name="submit"-->
-      <button type="button"><a href="actor-info.html">Search</a></button>
+      <button id="submit-button" type="button"><a id="search-link" href="actor-info.html">Search</a></button>
     </form>
   </section>
 
