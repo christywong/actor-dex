@@ -148,15 +148,12 @@
  </section>
 
   <script>
-    function responsiveNav() {
-      var x = document.getElementById("nav-links");
-      x.className = (x.className === "topnav") ? "topnav responsive" : "topnav";
-    }
     function favorite() {
     	var star = document.getElementById('star-icon').src;
       document.getElementById('star-icon').src = (star.indexOf('star.png') != -1) ? 'res/star-filled.png' : 'res/star.png';
     }
   </script>
 
+  <script type="text/javascript" href="js/shared.js"></script>
 </body>
 </html>
