@@ -1,54 +1,171 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 	<meta charset="utf-8">
 	<title>Actor Information</title>
  	<meta name="author" content="Christy Wong, Arlen Pan, Kelsey Ma">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 	<link rel="stylesheet" type="text/css" href="styles/shared.css">
 
+	<style type="text/css">
+		#nav-bar {
+			z-index: 1000;
+		}
+ 		#actor-info {
+ 			margin-top: 100px;
+ 			position: relative;
+ 		}
+ 		#actor-name {
+ 			display: inline;
+ 		}
+ 		#main-info {
+ 			position: absolute;
+ 			top: 0;
+ 			left: 10%;
+ 			width: 45%;
+ 		}
+ 		#img-button-info {
+ 			position: absolute;
+ 			top: 0;
+ 			right: 10%;
+ 			width: 25%;
+ 			margin-top: 10px;
+ 		}
+ 		#movies ul {
+  		list-style-type: none;
+  		padding-left: 0px;
+  		margin-top: -10px;
+  	}
+  	#actor-photo {
+  		max-width: 100%;
+  		height: auto;
+  	}
+  	#edit-button {
+  		margin: 0 auto;
+  		margin-top: 10px;
+			margin-right: 10px;
+  		background: #4B99AD;
+  		padding: 8px 15px 8px 15px;
+  		border: none;
+  		border-radius: 3px;
+  		color: white;
+  		font-size: 14px;
+  		cursor: pointer;
+  		float: left;
+  		width: 100%;
+  	}
+  	#delete-button {
+  		margin: 0 auto;
+  		margin-top: 10px;
+  		background: #C9302C;
+  		padding: 8px 15px 8px 15px;
+  		border: none;
+  		border-radius: 3px;
+  		color: white;
+  		font-size: 14px;
+  		cursor: pointer;
+  		float: left;
+  		width: 100%;
+  	}
+  	a {
+  		color: #4B99AD;
+  		text-decoration: none;
+  	}
+  	a:hover {
+  		color: #337a8c;
+  	}
+  	@media screen and (max-width: 767px) {
+  		#actor-info {
+  			position: absolute;
+  		}
+  		#main-info {
+  			position: relative;
+  			width: 80%;
+  		}
+  		#img-info {
+  			position: relative;
+  			width: 80%;
+  			left: 10%;
+  		}
+  	}
+ 	</style>
 </head>
 
 <body>
-
-	<section id="nav-bar">
-		<h1 id="title">Actor-Dex</h1>
-		<nav id="nav-links">
-			<a id="link-catalogue" href="catalogue.html">Catalogue</a> |
-			<a id="link-favorites" href="favorites.html">Favorites</a> |
-			<a id="link-login" href="login.html">Log Out</a>
-		</nav>
-	</section>
+	<header id="nav-bar">
+    <h1 id="title"><a href="index.html">Actor-Dex</a></h1>
+    <nav>
+      <ul class="topnav" id="nav-links">
+        <li><a id="link-favorites" href="favorites.html">Favorites</a></li>
+        <li><a id="link-login" href="login.html">Log Out</a></li>
+        <li class="icon"><a href="javascript:void(0);" onclick="responsiveNav()">☰</a></li> 
+      </ul>
+    </nav>
+  </header>
  
 	<section id="actor-info">
-	 	<h2>Actor Name</h2>
-	 	<input type="checkbox" id="favorite">
-	 	<label for="favorite">Favorite</label>
-	 	<section id="bio">
-	 		<h3>Biography</h3>
-	 		<p>Lorem ipsum dolor sit amet, at pro illud ipsum virtute, invidunt incorrupte ut vis. Quod clita eripuit ius in, mel ipsum ridens ut, sed id affert senserit. Illum tollit decore cum an, simul animal audire cu ius. No tollit latine sit.</p>
+		<section id="main-info">
+		 	<h2 id="actor-name">Actor Name</h2>
+		 	<img src="res/star.png" alt="Favorite" width="25px" id="star-icon" onmouseover="this.style.cursor='pointer'" onclick="favorite()">
+	 		<p>Gender | Age | Country of Origin</p>
+		 	<section id="bio">
+		 		<h3>Biography</h3>
+		 		<p>Lorem ipsum dolor sit amet, at pro illud ipsum virtute, invidunt incorrupte ut vis. Quod clita eripuit ius in, mel ipsum ridens ut, sed id affert senserit. Illum tollit decore cum an, simul animal audire cu ius. No tollit latine sit.</p>
+		 	</section>
+		 	<section id="movies">
+				<h3>Filmography</h3>
+				<ul>
+					<li>
+						<input type="checkbox" id="movie1">
+		 				<label for="movie1"><a href="movie-inception.html">Inception</a></label>
+		 			</li>
+		 			<li>
+		 				<input type="checkbox" id="movie2">
+		 				<label for="movie2">Movie 2</label>
+		 			</li>
+		 			<li>
+				 		<input type="checkbox" id="movie3">
+				 		<label for="movie3">Movie 3</label>
+				 	</li>
+				 	<li>
+				 		<input type="checkbox" id="movie4">
+				 		<label for="movie4">Movie 4</label>
+				 	</li>
+				</ul>
+			</section>
+		</section>
+		<section id="img-button-info">
+		 	<img id="actor-photo" src="https://pbs.twimg.com/profile_images/674498990214279168/2Vle-yah.jpg" alt="Actor Headshot">
+		 	<div id="edit-delete">
+	 			<form action="edit-actor.html">
+	 				<button type="submit" id="edit-button"> Edit</button>
+	 			</form>
+	 			<form action="delete-actor-dialog.html">
+	 				<button type="submit" id="delete-button">Delete</button>
+	 		 	</form>
+	 		 </div>
 	 	</section>
-	 	<section id="movies">
-	 		<h3>Filmography</h3>
-	 		<input type="checkbox" id="movie1">
-	 		<label for="movie1"><a href="movie-inception.html">Inception</a></label>
-	 		<input type="checkbox" id="movie2">
-	 		<label for="movie2">Movie 2</label>
-	 		<input type="checkbox" id="movie3">
-	 		<label for="movie3">Movie 3</label>
-	 		<input type="checkbox" id="movie4">
-	 		<label for="movie4">Movie 4</label>
-	 	</section>
-	 	<img src="https://pbs.twimg.com/profile_images/674498990214279168/2Vle-yah.jpg" alt="Actor Headshot">
-	 	<p>Gender</p>
-	 	<p>Age</p>
-	 	<p>Country of Origin</p>
-	 	<form action="edit-actor.html">
-		 	<button type="submit">Edit</button>
-		</form>
-	 	<form action="delete-actor-dialog.html">
-		 	<button type="submit">Delete</button>
- 		</form>
  </section>
+
+  <script>
+    function responsiveNav() {
+      var x = document.getElementById("nav-links");
+      if (x.className === "topnav") {
+          x.className += " responsive";
+      } else {
+          x.className = "topnav";
+      }
+    }
+    function favorite() {
+    	var star = document.getElementById('star-icon').src;
+        if (star.indexOf('star.png') != -1) {
+            document.getElementById('star-icon').src  = 'res/star-filled.png';
+        }
+         else {
+           document.getElementById('star-icon').src = 'res/star.png';
+       }
+    }
+  </script>
 
 </body>
 </html>
