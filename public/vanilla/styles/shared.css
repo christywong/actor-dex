@@ -80,7 +80,7 @@ section.center-section {
   }
 }
 
-/* Shared Button CSS for Submit, Edit and Yes */
+/* Shared Button CSS for Submit, Edit/Delete and Yes/No */
 .button-general {
   display: block;
   margin: 0 auto;
