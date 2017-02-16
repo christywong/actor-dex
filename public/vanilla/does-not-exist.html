@@ -1,28 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<title>Does Not Exist</title>
+	<meta name="author" content="Christy Wong, Arlen Pan, Kelsey Ma">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="styles/shared.css">
 
- <meta charset="utf-8">
- <title>Does Not Exist</title>
- <meta name="author" content="Christy Wong, Arlen Pan, Kelsey Ma">
+	<style>
+		#does-not-exist {
+  		margin-top: 200px;
+  		text-align: center;
+  	}
+    p {
+      font-size: 18px;
+      padding-top: 10px;
+    }
+	</style>
 
 </head>
 
 <body>
-
-	<section id="nav-bar">
-  	<h1 id="title">Actor-Dex</h1>
-  	<nav id="nav-links">
-    	<a id="link-catalogue" href="catalogue.html">Catalogue</a> |
-    	<a id="link-favorites" href="favorites.html">Favorites</a> |
-    	<a id="link-login" href="login.html">Log Out</a>
-   	</nav>
-	</section>
+	<header id="nav-bar">
+    <h1 id="title"><a href="index.html">Actor-Dex</a></h1>
+    <nav>
+      <ul class="topnav" id="nav-links">
+        <li><a id="link-favorites" href="favorites.html">Favorites</a></li>
+        <li><a id="link-login" href="login.html">Log Out</a></li>
+        <li class="icon"><a href="javascript:void(0);" onclick="responsiveNav()">☰</a></li> 
+      </ul>
+    </nav>
+  </header>
 
 	<section id="does-not-exist">
-		<h3>Actor/Actress does not currently exist in database.</h3>
-		<p>Add him/her <a href="#">here</a>.</p>
+    <h1>Oops!</h1>
+		<h3>Looks like that actor/actress does not currently exist in our database.</h3>
+		<p>Add him/her <a href="edit-actor.html">here</a>.</p>
 	</section>
+
+	<script>
+    function responsiveNav() {
+      var x = document.getElementById("nav-links");
+      if (x.className === "topnav") {
+          x.className += " responsive";
+      } else {
+          x.className = "topnav";
+      }
+    }
+  </script>
 
 </body>
 </html>

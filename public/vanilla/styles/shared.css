@@ -16,7 +16,7 @@ header h1 a {
   margin-left: 10px;
 }
 header h1 a:hover {
-  color: #555;
+  color: #969494;
 }
 header nav {
   float: right;
@@ -37,7 +37,7 @@ header nav ul li a {
   text-decoration: none;
 }
 header nav ul li a:hover {
-  color: #555;
+  color: #969494;
 }
 li.icon {
   display: none;
@@ -72,4 +72,32 @@ li.icon {
   a#link-favorites {
     margin-top: 20px;
   }
+}
+
+/* Button CSS for the dialogs */
+.yes-no {
+  display: inline-block;
+}
+.yes-button {
+  margin: 0 auto;
+  margin-right: 10px;
+  background: #4B99AD;
+  padding: 8px 15px 8px 15px;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  float: left;
+}
+.no-button {
+  margin: 0 auto;
+  background: #C9302C;
+  padding: 8px 15px 8px 15px;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  float: left;
 }
