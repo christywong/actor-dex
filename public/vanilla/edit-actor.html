@@ -33,17 +33,14 @@
     .check-radio {
       margin-left: 15px;
     }
-    button {
+    button#submit-button {
       margin-top: 7px;
       background: #4B99AD;
       padding: 8px 15px 8px 15px;
       border: none;
       border-radius: 3px;
-    }
-    a#submit-link {
       color: white;
-      text-decoration: none;
-      font-size: 11pt;
+      font-size: 14px;
     }
     span {
       font-weight: bold;
@@ -58,20 +55,20 @@
 </head>
 
 <body>
-  <header id="nav-bar">
-    <h1 id="title"><a href="index.html">Actor-Dex</a></h1>
-    <nav>
+  <header class="nav-bar">
+    <h1 class="title"><a class="home" href="index.html">Actor-Dex</a></h1>
+    <nav class="menu">
       <ul class="topnav" id="nav-links">
-        <li><a id="link-favorites" href="favorites.html">Favorites</a></li>
-        <li><a id="link-login" href="login.html">Log Out</a></li>
-        <li class="icon"><a href="javascript:void(0);" onclick="responsiveNav()">☰</a></li> 
+        <li class="nav-list"><a class="list-links" id="link-favorites" href="favorites.html">Favorites</a></li>
+        <li class="nav-list"><a class="list-links" id="link-login" href="login.html">Log In</a></li>
+        <li class="nav-list icon"><a class="list-links" href="javascript:void(0);" onclick="responsiveNav()">☰</a></li> 
       </ul>
     </nav>
   </header>
 
   <section id="edit-info">
     <h1>Add/Edit Information</h1>
-    <form id="edit-form">
+    <form id="edit-form" action="actor-info.html">
       <label for="name"><span>Name</span></label><br><input type="text" name="name" id="name" class="text-input"><br>
       <label for="age"><span>Age</span></label><br><input type="text" name="age" id="age" class="text-input"><br>
       <label for="bio"><span>Biography</span></label><br><textarea form="edit-form" name="bio" id="bio" class="text-input"></textarea><br>
@@ -83,7 +80,7 @@
         <label><input type="radio" name="country" value="US" class="check-radio">United States</label><br>
         <label><input type="radio" name="country" value="UK" class="check-radio">United Kingdom</label><br>
       <!--input type="submit" name="submit"-->
-      <button type="button"><a id="submit-link" href="actor-info.html">Submit</a></button>
+      <button type="submit" id="submit-button">Submit</button>
     </form>
   </section>
   

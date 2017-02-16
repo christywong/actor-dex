@@ -25,18 +25,15 @@
       border: 1px solid #C2C2C2;
       box-shadow: 1px 1px 4px #EBEBEB;
     }
-    button {
+    button#submit-button {
       display: block;
       margin: 0 auto;
       background: #4B99AD;
       padding: 8px 15px 8px 15px;
       border: none;
       border-radius: 3px;
-    }
-    a#submit-link {
       color: white;
-      text-decoration: none;
-      font-size: 11pt;
+      font-size: 14px;
     }
     @media screen and (max-width:700px) {
       input#email-input {
@@ -50,24 +47,24 @@
 </head>
 
 <body>
-  <header id="nav-bar">
-    <h1 id="title"><a href="index.html">Actor-Dex</a></h1>
-    <nav>
+  <header class="nav-bar">
+    <h1 class="title"><a class="home" href="index.html">Actor-Dex</a></h1>
+    <nav class="menu">
       <ul class="topnav" id="nav-links">
-        <li><a id="link-favorites" href="favorites.html">Favorites</a></li>
-        <li><a id="link-login" href="login.html">Log In</a></li>
-        <li class="icon"><a href="javascript:void(0);" onclick="responsiveNav()">☰</a></li> 
+        <li class="nav-list"><a class="list-links" id="link-favorites" href="favorites.html">Favorites</a></li>
+        <li class="nav-list"><a class="list-links" id="link-login" href="login.html">Log In</a></li>
+        <li class="nav-list icon"><a class="list-links" href="javascript:void(0);" onclick="responsiveNav()">☰</a></li> 
       </ul>
     </nav>
   </header>
   
   <section id="log-in">
     <h1 class="log-in-title">Log In</h1>
-    <form id="login-form">
+    <form id="login-form" action="index.html">
       <input id="email-input" class="text-input" type="text" name="email" placeholder="Email"><br>
       <input id="password-input" class="text-input" type="text" name="password" placeholder="Password"><br>
       <!--input type="submit" name="submit"-->
-      <button type="button"><a id="submit-link" href="index.html">Submit</a></button>
+      <button type="submit" id="submit-button">Submit</button>
     </form>
   </section>
 
