@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Inception</title>
-	<meta name="author" content="Christy Wong, Arlen Pan, Kelsey Ma">
+  <meta charset="utf-8">
+  <title>Inception</title>
+  <meta name="author" content="Christy Wong, Arlen Pan, Kelsey Ma">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles/shared.css">
+  <style type="text/css">
+    section#movie {
+      margin-top: 100px;
+    }
+  </style>
 </head>
 
 <body>
-	<section id="nav-bar">
-		<h1 id="title">Actor-Dex</h1>
-		<nav id="nav-links">
-			<a id="link-catalogue" href="catalogue.html">Catalogue</a> |
-			<a id="link-favorites" href="favorites.html">Favorites</a> |
-			<a id="link-login" href="index.html">Log In</a>
-		</nav>
-	</section>
+  <header id="nav-bar">
+    <h1 id="title"><a href="index.html">Actor-Dex</a></h1>
+    <nav>
+      <ul class="topnav" id="nav-links">
+        <li><a id="link-favorites" href="favorites.html">Favorites</a></li>
+        <li><a id="link-login" href="login.html">Log In</a></li>
+        <li class="icon"><a href="javascript:void(0);" onclick="responsiveNav()">☰</a></li> 
+      </ul>
+    </nav>
+  </header>
 
-	<section>
-		<h3>Inception</h3>
-		<h5>Starring:</h5>
-		<ul id="list-actors">
-			<li>Leonardo Dicaprio</li>
-			<li>Joseph-Gordon Levitt</li>
-			<li>Ellen Page</li>
-			<li>Tom Hardy</li>
-			<li>Ken Watanabe</li>
-			<li>Dileep Rao</li>
-		</ul>
-	</section>
+  <section id="movie">
+    <h2>Inception</h2>
+    <h5>Starring:</h5>
+    <ul id="list-actors">
+      <li>Leonardo Dicaprio</li>
+      <li>Joseph-Gordon Levitt</li>
+      <li>Ellen Page</li>
+      <li>Tom Hardy</li>
+      <li>Ken Watanabe</li>
+      <li>Dileep Rao</li>
+    </ul>
+  </section>
 
 </body>
 </html>

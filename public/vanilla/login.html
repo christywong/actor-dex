@@ -72,12 +72,8 @@
 
    <script>
     function responsiveNav() {
-        var x = document.getElementById("nav-links");
-        if (x.className === "topnav") {
-            x.className += " responsive";
-        } else {
-            x.className = "topnav";
-        }
+      var x = document.getElementById("nav-links");
+      x.className = (x.className === "topnav") ? x.className + " responsive" : "topnav";
     }
   </script>
 </body>
