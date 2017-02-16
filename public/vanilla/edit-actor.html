@@ -33,14 +33,11 @@
     .check-radio {
       margin-left: 15px;
     }
-    button#submit-button {
+    #submit-button {
       margin-top: 7px;
-      background: #4B99AD;
-      padding: 8px 15px 8px 15px;
-      border: none;
-      border-radius: 3px;
       color: white;
       font-size: 14px;
+      float: left;
     }
     span {
       font-weight: bold;
@@ -60,7 +57,7 @@
     <nav class="menu">
       <ul class="topnav" id="nav-links">
         <li class="nav-list"><a class="list-links" id="link-favorites" href="favorites.html">Favorites</a></li>
-        <li class="nav-list"><a class="list-links" id="link-login" href="login.html">Log In</a></li>
+        <li class="nav-list"><a class="list-links" id="link-login" href="login.html">Log Out</a></li>
         <li class="nav-list icon"><a class="list-links" href="javascript:void(0);" onclick="responsiveNav()">☰</a></li> 
       </ul>
     </nav>
@@ -80,7 +77,7 @@
         <label><input type="radio" name="country" value="US" class="check-radio">United States</label><br>
         <label><input type="radio" name="country" value="UK" class="check-radio">United Kingdom</label><br>
       <!--input type="submit" name="submit"-->
-      <button type="submit" id="submit-button">Submit</button>
+      <button type="submit" id="submit-button" class="button-general blue-button">Submit</button>
     </form>
   </section>
   
