@@ -1,7 +1,7 @@
 body {
   font-family: "Arial";
 }
-header {
+.nav-bar {
   background-color: #333;
   position: fixed;
   width: 100%;
@@ -9,37 +9,37 @@ header {
   top:0;
   left: 0;
 }
-header h1 a {
+.home {
   color: white;
   text-decoration: none;
   float: left;
   margin-left: 20px;
 }
-header h1 a:hover {
+a.home:hover {
   color: #969494;
 }
-header nav {
+.menu {
   float: right;
 }
-header nav ul {
+.topnav {
   list-style: none;
   margin: 10px;
   overflow: hidden;
 }
-header nav ul li {
+.nav-list {
   display: inline-block;
   margin-right: 10px;
   float: left;
   padding-right: 10px;
 }
-header nav ul li a {
+.list-links {
   color: white;
   text-decoration: none;
 }
-header nav ul li a:hover {
+a.list-links:hover {
   color: #969494;
 }
-li.icon {
+.icon {
   display: none;
 }
 section.first-section {
@@ -51,8 +51,8 @@ section.center-section {
 	margin-right: auto;
 }
 @media screen and (max-width:500px) {
-  ul.topnav li {display: none;}
-  ul.topnav li.icon {
+  .nav-list {display: none;}
+  .icon {
     float: right;
     display: inline-block;
     font-size: 20px;
