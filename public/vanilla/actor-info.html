@@ -41,30 +41,12 @@
   		height: auto;
   	}
   	#edit-button {
-  		margin: 0 auto;
   		margin-top: 10px;
 			margin-right: 10px;
-  		background: #4B99AD;
-  		padding: 8px 15px 8px 15px;
-  		border: none;
-  		border-radius: 3px;
-  		color: white;
-  		font-size: 14px;
-  		cursor: pointer;
-  		float: left;
   		width: 100%;
   	}
   	#delete-button {
-  		margin: 0 auto;
   		margin-top: 10px;
-  		background: #C9302C;
-  		padding: 8px 15px 8px 15px;
-  		border: none;
-  		border-radius: 3px;
-  		color: white;
-  		font-size: 14px;
-  		cursor: pointer;
-  		float: left;
   		width: 100%;
   	}
   	a {
@@ -82,7 +64,7 @@
   			position: relative;
   			width: 80%;
   		}
-  		#img-info {
+  		#img-button-info {
   			position: relative;
   			width: 80%;
   			left: 10%;
@@ -138,10 +120,10 @@
 		 	<img id="actor-photo" src="https://pbs.twimg.com/profile_images/674498990214279168/2Vle-yah.jpg" alt="Actor Headshot">
 		 	<div id="edit-delete">
 	 			<form action="edit-actor.html">
-	 				<button type="submit" id="edit-button"> Edit</button>
+	 				<button type="submit" id="edit-button" class="button-general blue-button choice-button">Edit</button>
 	 			</form>
 	 			<form action="delete-actor-dialog.html">
-	 				<button type="submit" id="delete-button">Delete</button>
+	 				<button type="submit" id="delete-button" class="button-general red-button choice-button">Delete</button>
 	 		 	</form>
 	 		 </div>
 	 	</section>
@@ -154,6 +136,6 @@
     }
   </script>
 
-  <script type="text/javascript" href="js/shared.js"></script>
+  <script type="text/javascript" src="js/shared.js"></script>
 </body>
 </html>

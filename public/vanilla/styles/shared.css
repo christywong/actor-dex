@@ -80,30 +80,29 @@ section.center-section {
   }
 }
 
+/* Shared Button CSS for Submit, Edit and Yes */
+.button-general {
+  display: block;
+  margin: 0 auto;
+  padding: 8px 15px 8px 15px;
+  border: none;
+  border-radius: 3px;
+}
+.blue-button {
+  background: #4B99AD;
+}
+.red-button {
+  background: #C9302C;
+}
+
 /* Button CSS for the dialogs */
 .yes-no {
   display: inline-block;
 }
-.yes-button {
-  margin: 0 auto;
-  margin-right: 10px;
-  background: #4B99AD;
-  padding: 8px 15px 8px 15px;
-  border: none;
-  border-radius: 3px;
+.choice-button {
   color: white;
   font-size: 14px;
   cursor: pointer;
   float: left;
-}
-.no-button {
-  margin: 0 auto;
-  background: #C9302C;
-  padding: 8px 15px 8px 15px;
-  border: none;
-  border-radius: 3px;
-  color: white;
-  font-size: 14px;
-  cursor: pointer;
-  float: left;
+  margin-right: 5px;
 }
