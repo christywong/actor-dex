@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 	<meta charset="utf-8">
 	<title>Remove Favorite</title>
 	<meta name="author" content="Christy Wong, Arlen Pan, Kelsey Ma">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<style type="text/css">
+		#unfavorite-dialog {
+			text-align: center;
+		}
+	</style>
 </head>
 <body>
-
 	<section id="unfavorite-dialog">
 		<h3>Are you sure you want to unfavorite?</h3>
-		<button type="button">Yes</button>
-		<button type="button">No</button>
+		<a class="btn btn-primary" href="actor-info.html" role="button">Yes</a>
+		<a class="btn btn-danger" href="actor-info.html" role="button">No</a>
 	</section>
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>
