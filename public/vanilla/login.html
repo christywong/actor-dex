@@ -8,33 +8,53 @@
   <link rel="stylesheet" type="text/css" href="styles/shared.css">
   <style type="text/css">
     section#log-in {
-      padding-top: 80px;
+      padding-top: 100px;
       margin: auto;
-      width: 50%;
+      width: 33%;
+    }
+    #login-box {
+      background: #F7F7F7;
+      padding-bottom: 15px;
+      border: 1px solid #c6c6c6;
+      border-radius: 8px;
     }
     .log-in-title {
+      padding-top: 10px;
       text-align: center;
+      background: #4B99AD;
+      color: white;
+      padding-bottom: 10px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
     }
     .text-input {
       display: block;
       margin : 0 auto;
-      width: 55%;
+      width: 75%;
       font-size: 12pt;
       text-align: center;
       padding: 10px 10px 10px 10px;
       border: 1px solid #C2C2C2;
       box-shadow: 1px 1px 4px #EBEBEB;
+      border-radius: 3px;
     }
     #submit-button {
       color: white;
       font-size: 14px;
+      width: 80%;
     }
     @media screen and (max-width:700px) {
+      section#log-in {
+        width: 80%;
+      }
       input#email-input {
-        width: 100%;
+        width: 70%;
       }
       input#password-input {
-        width: 100%;
+        width: 70%;
+      }
+      #submit-button {
+        width: 77%;
       }
     }
   </style>
@@ -53,13 +73,15 @@
   </header>
   
   <section id="log-in">
-    <h1 class="log-in-title">Log In</h1>
-    <form id="login-form" action="index.html">
-      <input id="email-input" class="text-input" type="text" name="email" placeholder="Email"><br>
-      <input id="password-input" class="text-input" type="text" name="password" placeholder="Password"><br>
-      <!--input type="submit" name="submit"-->
-      <button id="submit-button" type="submit" class="button-general blue-button">Submit</button>
-    </form>
+    <div id="login-box">
+      <h1 class="log-in-title">Log In</h1>
+      <form id="login-form" action="index.html">
+        <input id="email-input" class="text-input" type="text" name="email" placeholder="Email"><br>
+        <input id="password-input" class="text-input" type="text" name="password" placeholder="Password"><br>
+        <!--input type="submit" name="submit"-->
+        <button id="submit-button" type="submit" class="button-general blue-button">Submit</button>
+      </form>
+    </div>
   </section>
 
   <script type="text/javascript" src="js/shared.js"></script>

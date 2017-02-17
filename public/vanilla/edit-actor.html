@@ -8,45 +8,50 @@
   <link rel="stylesheet" type="text/css" href="styles/shared.css">
   <style type="text/css">
     section#edit-info {
-      margin-top: 90px;
-      margin-left: 20px;
+      padding-top: 70px;
+      margin: auto;
+      width: 40%;
+    }
+    #form-title {
+      text-align: center;
     }
     input {
       font-size: 11pt;
       margin-bottom: 7px;
     }
     .text-input {
-      width: 40%;
-      border: 1px solid #C2C2C2;
-      box-shadow: 1px 1px 4px #EBEBEB;
-      margin-top: 3px;
-      padding: 10px 10px 10px 10px;
+      width: 100%;
+      margin-top: 5px;
     }
     textarea#bio {
       margin-bottom: 7px;
       height: 100px;
+      font-size: 11pt;
+    }
+    .shadow {
       border: 1px solid #C2C2C2;
       box-shadow: 1px 1px 4px #EBEBEB;
-      font-size: 11pt;
       padding: 10px 10px 10px 10px;
     }
     .check-radio {
       margin-left: 15px;
     }
-    #submit-button {
-      margin-top: 7px;
-      color: white;
-      font-size: 14px;
-      float: left;
-    }
     span {
+      display: inline-block;
       font-weight: bold;
     }
+    .spacing {
+      padding-top: 5px;
+    }
+    #submit-button {
+      color: white;
+      font-size: 14px;
+      margin-top: 3px;
+    }
     @media screen and (max-width:750px) {
-      .text-input {
-        width: 70%;
+      section#edit-info {
+        width: 80%;
       }
-      
     }
   </style>
 </head>
@@ -57,23 +62,23 @@
     <nav class="menu">
       <ul class="topnav" id="nav-links">
         <li class="nav-list"><a class="list-links" id="link-favorites" href="favorites.html">Favorites</a></li>
-        <li class="nav-list"><a class="list-links" id="link-login" href="login.html">Log Out</a></li>
+        <li class="nav-list"><a class="list-links" id="link-login" href="login.html">Log Out </a></li>
         <li class="nav-list icon"><a class="list-links" href="javascript:void(0);" onclick="responsiveNav()">☰</a></li> 
       </ul>
     </nav>
   </header>
 
   <section id="edit-info">
-    <h1>Add/Edit Information</h1>
+    <h1 id="form-title">Add/Edit Information</h1>
     <form id="edit-form" action="actor-info.html">
-      <label for="name"><span>Name</span></label><br><input type="text" name="name" id="name" class="text-input"><br>
-      <label for="age"><span>Age</span></label><br><input type="text" name="age" id="age" class="text-input"><br>
-      <label for="bio"><span>Biography</span></label><br><textarea form="edit-form" name="bio" id="bio" class="text-input"></textarea><br>
+      <label for="name"><span>Name</span></label><br><input type="text" name="name" id="name" class="text-input shadow"><br>
+      <label for="age"><span>Age</span></label><br><input type="text" name="age" id="age" class="text-input shadow"><br>
+      <label for="bio"><span>Biography</span></label><br><textarea form="edit-form" name="bio" id="bio" class="text-input shadow"></textarea><br>
       <span>Link to Image of Actor/Actress</span><br><input type="file" name="image" id="image"><br>
-      <span>Gender</span><br>
+      <span class="spacing">Gender</span><br>
         <label><input type="checkbox" name="gender" value="male" class="check-radio">Male</label><br>
         <label><input type="checkbox" name="gender" value="female" class="check-radio">Female</label><br>
-      <span>Country of Origin</span><br>
+      <span class="spacing">Country of Origin</span><br>
         <label><input type="radio" name="country" value="US" class="check-radio">United States</label><br>
         <label><input type="radio" name="country" value="UK" class="check-radio">United Kingdom</label><br>
       <!--input type="submit" name="submit"-->
