@@ -1,6 +1,12 @@
-body {
-  font-family: "Arial";
+/* CSS Reset */
+html, body, ul, ol, li, form, fieldset, legend {
+  margin: 0;
+  padding: 0;
 }
+h1, h2, h3, h4, h5, h6, p { margin-top: 0; }
+body { font-family: "Arial"; }
+
+/* CSS for the responsive navbar */
 .nav-bar {
   background-color: #333;
   position: fixed;
@@ -15,6 +21,7 @@ body {
   text-decoration: none;
   float: left;
   margin-left: 20px;
+  margin-top: 10px;
 }
 a.home:hover {
   color: #969494;
@@ -24,14 +31,11 @@ a.home:hover {
 }
 .topnav {
   list-style: none;
-  margin: 10px;
-  overflow: hidden;
 }
 .nav-list {
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 20px;
   float: left;
-  padding-right: 10px;
 }
 .list-links {
   color: white;
@@ -43,14 +47,6 @@ a.list-links:hover {
 .icon {
   display: none;
 }
-section.first-section {
-	margin-top:100px;
-}
-section.center-section {
-	width: 80%;
-	margin-left: auto;
-	margin-right: auto;
-}
 @media screen and (max-width:500px) {
   .nav-list {display: none;}
   .icon {
@@ -58,7 +54,6 @@ section.center-section {
     display: inline-block;
     font-size: 20px;
   }
-
   ul.topnav.responsive {
     position: relative;
     margin-bottom: 0px;
@@ -78,7 +73,17 @@ section.center-section {
   }
   a#link-favorites {
     margin-top: 20px;
+    margin-right: 10px;
   }
+}
+
+section.first-section {
+  margin-top:100px;
+}
+section.center-section {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Shared Button CSS for Submit, Edit/Delete and Yes/No */
