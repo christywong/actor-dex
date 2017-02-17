@@ -28,11 +28,11 @@
  			width: 25%;
  			margin-top: 10px;
  		}
- 		#movies ul {
+/* 		#movies ul {
   		list-style-type: none;
   		padding-left: 0px;
   		margin-top: -10px;
-  	}
+  	}*/
   	#actor-photo {
   		max-width: 100%;
   		height: auto;
@@ -53,7 +53,25 @@
   	}
   	a:hover {
   		color: #337a8c;
+      cursor: pointer;
   	}
+    .card {
+      box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+      width: 30%;
+      margin-bottom: 20px;
+      float: left;
+      margin-right: 10px;
+    }
+    .card:hover {
+      box-shadow: 0 8px 16px 9 rgba(0,0,0,0.2);
+    }
+    .card-content {
+      text-align: center;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      font-size: 15px;
+    }
   	@media screen and (max-width: 767px) {
   		#actor-info {
   			position: absolute;
@@ -94,7 +112,7 @@
 		 	</section>
 		 	<section id="movies">
 				<h3>Filmography</h3>
-				<ul>
+				<!-- <ul>
 					<li>
 						<input type="checkbox" id="movie1">
 		 				<label for="movie1"><a href="movie-inception.html">Inception</a></label>
@@ -111,7 +129,21 @@
 				 		<input type="checkbox" id="movie4">
 				 		<label for="movie4">Movie 4</label>
 				 	</li>
-				</ul>
+				</ul> -->
+        <div class="card">
+          <a href="movie-inception.html"><img src="res/inception.jpg" alt="Transformers Poster" width="100%"></a>
+          <div class="card-content">
+            <input type="checkbox" id="movie1">
+            <label for="movie1"><a href="movie-inception.html">Transformers</a></label>
+          </div>
+        </div>
+        <div class="card">
+          <a href="movie-inception.html"><img src="res/maleficent.jpg" alt="Maleficent Poster" width="100%"></a>
+          <div class="card-content">
+            <input type="checkbox" id="movie2">
+            <label for="movie2"><a href="movie-inception.html">Maleficent</a></label>
+          </div>
+        </div>
 			</section>
 		</section>
 		<section id="img-button-info">
