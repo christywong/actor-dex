@@ -33,8 +33,17 @@
   		max-width: 100%;
   		height: auto;
   	}
+    .panel {
+      word-wrap: break-word;
+    }
     .panel-body {
       text-align: center;
+      padding: 0px;
+    }
+    @media screen and (max-width: 456px) {
+      .panel-body {
+        font-size: 12px;
+      }
     }
  	</style>
 </head>
@@ -79,7 +88,7 @@
                  <a href="movie-inception.html"><img class="panel-heading" src="res/transformers.jpg" width="100%" alt="Transformers Poster"></a>
                  <div class="panel-body">
                    <input type="checkbox" id="movie1">
-                   <label for="movie1"><a href="movie-inception.html" class=>Transformers</a></label>
+                   <label for="movie1"><a href="movie-inception.html">Transformers</a></label>
                  </div>
                 </div>
               </div>
