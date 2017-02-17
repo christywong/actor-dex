@@ -4,67 +4,119 @@
 	<meta charset="utf-8">
 	<title>Favorites</title>
 	<meta name="author" content="Christy Wong, Arlen Pan, Kelsey Ma">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<style type="text/css">
+		section#favorites {
+			padding-top: 50px;
+			margin-left: 20px;
+		}
+    section#favorites-actors {
+      margin-top: 20px;
+    }
+    section#favorites-actors img {
+      width: 100%;
+    }
+    .panel-body {
+      text-align: center;
+    }
+
+	</style>
 </head>
 
 <body>
 	<section id="nav-bar">
-		<h1 id="title">Actor-Dex</h1>
-		<nav id="nav-links">
-			<a id="link-catalogue" href="catalogue.html">Catalogue</a> |
-			<a id="link-favorites" href="favorites.html">Favorites</a> |
-			<a id="link-login" href="index.html">Log Out</a>
-		</nav>
-	</section>
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-toggleable-md">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+          </button>
+          <a class="navbar-brand" href="index.html">Actor-Dex</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="favorites.html">Favorites</a></li>
+            <li><a href="login.html">Log Out</a></li>
+          </ul>
+        </div>
+      </div>
+	  </nav>
+  </section>
 
-	<section>
-		<h3>Favorite Actors</h3>
-		<p><a href="notifications.html">Notifications</a></p>
-		Filter by:
-		<select id="select-gender">
-			<option value="" disabled selected>Gender</option>
-			<option value="male">Male</option>
-			<option value="female">Female</option>
-		</select>
-		<select id="select-country">
-			<option value="" disabled selected>Country</option>
-			<option value="united-states">United States</option>
-			<option value="united-kingdom">United Kingdom</option>
-			<option value="other">Other</option>
-		</select>
+  <div class="container">
 
-		<!-- ACTOR CARDS -->
-		<figure class="actor">
-			<a href="actor-info.html">
-				<img src="res/ryangosling.jpg" alt="Ryan Gosling">
-			</a>
-			<input type="checkbox" value="fav-ryan-gosling">
-			<figcaption>Ryan Gosling</figcaption>
-		</figure>
+    <section id="favorites">
+      <div class="row">
+      	<h3>Favorite Actors</h3>
+      	<p><a href="notifications.html">Notifications</a></p>
+      	Filter by:
+      	<select id="select-gender">
+      		<option value="" disabled selected>Gender</option>
+      		<option value="male">Male</option>
+      		<option value="female">Female</option>
+      	</select>
+      	<select id="select-country">
+      		<option value="" disabled selected>Country</option>
+      		<option value="united-states">United States</option>
+      		<option value="united-kingdom">United Kingdom</option>
+      		<option value="other">Other</option>
+      	</select>
+      </div>
+    </section>
+    
+    <section id="favorites-actors" class="center-section">
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="panel panel-default">
+            <figure class="panel-body">
+              <a href="actor-info.html">
+                <img class="portrait" src="res/ryangosling.jpg" alt="Ryan Gosling">
+              </a>
+              <figcaption class="panel-footer">Ryan Gosling</figcaption>
+            </figure>
+          </div>
+        </div>
 
-		<figure class="actor">
-			<a href="actor-info.html">
-				<img src="res/emmawatson.jpg" alt="Emma Watson">
-			</a>
-			<input type="checkbox" value="fav-emma-watson">
-			<figcaption>Emma Watson</figcaption>
-		</figure>
+        <div class="col-sm-3">
+          <div class="panel panel-default">
+            <figure class="panel-body">
+              <a href="actor-info.html">
+                <img class="portrait" src="res/emmawatson.jpg" alt="Emma Watson">
+              </a>
+              <figcaption class="panel-footer">Emma Watson</figcaption>
+            </figure>
+          </div>
+        </div>
 
-		<figure class="actor">
-			<a href="actor-info.html">
-				<img src="res/bradpitt.jpg" alt="Brad Pitt">
-			</a>
-			<input type="checkbox" value="fav-brad-pitt">
-			<figcaption>Brad Pitt</figcaption>
-		</figure>
+        <div class="col-sm-3">
+          <div class="panel panel-default">
+            <figure class="panel-body">
+              <a href="actor-info.html">
+                <img class="portrait" src="res/bradpitt.jpg" alt="Brad Pitt">
+              </a>
+              <figcaption class="panel-footer">Brad Pitt</figcaption>
+            </figure>
+          </div>
+        </div>
 
-		<figure class="actor">
-			<a href="actor-info.html">
-				<img src="res/elizabetholsen.jpg" alt="Elizabeth Olsen">
-			</a>
-			<input type="checkbox" value="fav-elizabeth-olsen">
-			<figcaption>Elizabeth Olsen</figcaption>
-		</figure>
-	</section>
+        <div class="col-sm-3">
+          <div class="panel panel-default">
+            <figure class="panel-body">
+              <a href="actor-info.html">
+                <img class="portrait" src="res/elizabetholsen.jpg" alt="Elizabeth Olsen">
+              </a>
+              <figcaption class="panel-footer">Elizabeth Olsen</figcaption>
+            </figure>
+          </div>
+        </div>
+        
+      </section>
+    </div>
+  </div>
 
 </body>
 </html>
