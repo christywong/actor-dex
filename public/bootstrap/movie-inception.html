@@ -9,7 +9,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <style type="text/css">
     #movie {
-      padding-top: 50px;
+      padding-top: 80px;
+    }
+    .movie-poster {
+      width: 100%;
+    }
+    .panel-body {
+      text-align: center;
+    }
+    .panel-body img {
+      width: 100%;
     }
   </style>  
 </head>
@@ -37,20 +46,61 @@
   </section>
 
   <div class="container">
-    <div class="row">
-      <section id="movie">
-        <h2>Inception</h2>
-        <h5>Starring:</h5>
-        <ul id="list-actors">
-          <li>Leonardo Dicaprio</li>
-          <li>Joseph-Gordon Levitt</li>
-          <li>Ellen Page</li>
-          <li>Tom Hardy</li>
-          <li>Ken Watanabe</li>
-          <li>Dileep Rao</li>
-        </ul>
-      </section>
-    </div>
+    <section id="movie">
+      <div class="row">
+        <div class="col-sm-8">
+          <h2>Inception (2010)</h2>
+          <p>Starring:</p>
+
+          <div class="row">
+            <div class="col-sm-4 col-xs-6">
+              <div class="panel panel-default">
+                <figure class="panel-body">
+                  <a href="actor-info.html">
+                    <img class="portrait" src="res/leonardodicaprio.jpg" alt="Leonardo Dicaprio">
+                  </a>
+                  <figcaption class="panel-footer">Leonardo Dicaprio</figcaption>
+                </figure>
+              </div>
+              <div class="panel panel-default">
+                <figure class="panel-body">
+                  <a href="actor-info.html">
+                    <img class="portrait" src="res/jgl.jpg" alt="Joseph-Gordon Levitt">
+                  </a>
+                  <figcaption class="panel-footer">Joseph-Gordon Levitt</figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <div class="col-sm-4 col-xs-6">
+              <div class="panel panel-default">
+                <figure class="panel-body">
+                  <a href="actor-info.html">
+                    <img class="portrait" src="res/ellenpage.jpg" alt="Ellen Page">
+                  </a>
+                  <figcaption class="panel-footer">Ellen Page</figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <div class="col-sm-4 col-xs-6">
+              <div class="panel panel-default">
+                <figure class="panel-body">
+                  <a href="actor-info.html">
+                    <img class="portrait" src="res/tomhardy.jpg" alt="Tom Hardy">
+                  </a>
+                  <figcaption class="panel-footer">Tom Hardy</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <img class="movie-poster" src="res/inception.jpg">
+        </div>
+      </div>
+    </section>
   </div>
 
   <script type="text/javascript" src="js/shared.js"></script>
