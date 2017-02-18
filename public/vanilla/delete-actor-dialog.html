@@ -14,6 +14,17 @@
 	</style>
 </head>
 <body>
+	<header class="nav-bar">
+    <h1 class="title"><a class="home" href="index.html">Actor-Dex</a></h1>
+    <nav class="menu">
+      <ul class="topnav" id="nav-links">
+        <li class="nav-list"><a class="list-links" id="link-favorites" href="favorites.html">Favorites</a></li>
+        <li class="nav-list"><a class="list-links" id="link-login" href="login.html">Log In</a></li>
+        <li class="nav-list icon"><a class="list-links" href="javascript:void(0);" onclick="responsiveNav()">☰</a></li> 
+      </ul>
+    </nav>
+  </header>
+  
 	<section id="delete-dialog">
 		<h3>Are you sure you want to delete?</h3>
 		<div class="yes-no">
@@ -30,5 +41,6 @@
         location.href = "actor-info.html";
     };
 	</script>
+	<script type="text/javascript" src="js/shared.js"></script>
 </body>
 </html>
