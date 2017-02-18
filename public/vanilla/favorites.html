@@ -11,26 +11,21 @@
       display: flex;
       flex-wrap: wrap;
     }
-
-    img.portrait {
-      width: 150px;
-      margin-right: 10px;
-    }
-
     figure {
-      display: flex;
+      box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2);
       margin: 10px 20px 10px 0px;
-      padding: 10px;
-      border: 1px solid lightgrey;
-      min-width: 250px;
-      width: 30%;
-      max-width: 300px;
-      height: 150px;
+      width: 200px;
+      text-align: center;
     }
-
-    figure figcaption {
-      align-self: flex-end;
-      font-size: 120%;
+    figure:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+    img.portrait {
+      width: 100%;
+    }
+    figcaption {
+      margin: 5px;
     }
   </style>
 </head>
